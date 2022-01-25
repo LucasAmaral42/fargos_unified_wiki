@@ -14,7 +14,7 @@ locs = xml.search('loc').map(&:text).reject do |loc|
   loc.match(%r{wiki/1\.|/dpl$}i)
 end
 
-file = File.open('public/shadowsofabaddon_links.txt', 'a')
+file = File.open('public/shadows_of_abaddon_links.txt', 'a')
 locs.each do |link|
   file.write("#{link}\n")
 end
