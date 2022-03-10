@@ -14,7 +14,7 @@ locs = xml.search('loc').map(&:text).reject do |loc|
   loc.match(%r{wiki/1\.|/dpl$|disambiguation|wiki/recipes/}i)
 end
 
-file = File.open('public/calamity_links.txt', 'a')
+file = File.open('public/jsonl/calamity_links.jsonl', 'a')
 locs.each do |link|
   file.write("#{link}\n")
 end

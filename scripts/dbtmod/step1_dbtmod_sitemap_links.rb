@@ -14,7 +14,7 @@ locs = xml.search('loc').map(&:text).reject do |loc|
   loc.match(%r{wiki/V1\.|/dpl$|wiki/%E}i)
 end
 
-file = File.open('public/dragon_ball_terraria_links.txt', 'a')
+file = File.open('public/jsonl/dragon_ball_terraria_links.jsonl', 'a')
 locs.each do |link|
   file.write("#{link}\n")
 end

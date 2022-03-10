@@ -14,7 +14,7 @@ locs = xml.search('loc').map(&:text).reject do |loc|
   loc.match(%r{wiki/1\.|/dpl$}i)
 end
 
-file = File.open('public/thorium_links.txt', 'a')
+file = File.open('public/jsonl/thorium_links.jsonl', 'a')
 locs.each do |link|
   file.write("#{link}\n")
 end

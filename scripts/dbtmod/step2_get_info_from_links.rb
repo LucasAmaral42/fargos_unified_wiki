@@ -5,8 +5,8 @@ require 'nokogiri'
 require 'json'
 
 MOD = 'dragon_ball_terraria'
-INFO_TXT_PATH = "public/#{MOD}_info.txt"
-LINK_TXT_PATH = "public/#{MOD}_links.txt"
+INFO_TXT_PATH = "public/jsonl/#{MOD}_info.jsonl"
+LINK_TXT_PATH = "public/jsonl/#{MOD}_links.jsonl"
 
 file = File.open(INFO_TXT_PATH, 'a')
 
