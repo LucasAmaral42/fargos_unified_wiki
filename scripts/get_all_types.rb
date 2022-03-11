@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'json'
-require 'byebug'
 
 MODS = %w[calamity dragon_ball_terraria shadows_of_abaddon thorium].freeze
 types = []
