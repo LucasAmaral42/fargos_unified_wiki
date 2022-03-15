@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :items
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'items#index'
+  get :items, to: 'items#show'
 end
