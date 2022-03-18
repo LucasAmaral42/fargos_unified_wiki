@@ -10,12 +10,16 @@ namespace :create_items_from_jsonl do
 
         mod = json['mod'].split('_').map(&:capitalize).join(' ')
 
+        next if Item.where(name: json['name'], mod: mod).present?
+
+        image_url = json['image_link'].match(/(.+(\.png|\.gif))|.+/i)[1] || ''
+
         item = {
           name: json['name'],
           types: json['types'],
           description: json['description'],
           url: json['link'],
-          image_url: json['image_link'],
+          image_url: image_url,
           mod: mod
         }
 

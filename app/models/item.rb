@@ -8,4 +8,6 @@ class Item
   field :mod, type: String
   field :url, type: String
   field :image_url, type: String
+
+  index({ name: 1, mod: 1 }, { unique: true })
 end
