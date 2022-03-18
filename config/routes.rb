@@ -2,4 +2,5 @@
 
 Rails.application.routes.draw do
   root 'items#show'
+  get :types, to: 'items#types'
 end

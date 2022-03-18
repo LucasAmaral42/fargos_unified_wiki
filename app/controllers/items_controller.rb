@@ -3,6 +3,10 @@ class ItemsController < ApplicationController
     render json: Item.in(filters).to_json
   end
 
+  def types
+    render json: Item.all.pluck(:types).flatten.uniq
+  end
+
   private
 
   def item_params
