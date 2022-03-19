@@ -156,9 +156,10 @@ test:
           mode: :primary
         max_pool_size: 1
 production:
-  sessions:
+  clients:
     default:
       uri: <%= ENV['MONGODB_DATABASE'] %>
       options:
         skip_version_check: true
         safe: true
+        server_selection_timeout: 5
