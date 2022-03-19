@@ -4,8 +4,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   config.public_file_server.headers = {
-    # 'Access-Control-Allow-Origin' => '*',  # only for debugging
-    'Access-Control-Allow-Origin' => 'https://xxxxxxxxxxxxxx.cloudfront.net',
+    'Access-Control-Allow-Origin' => '*',
     'Access-Control-Request-Method' => %w{GET OPTIONS}.join(",")
   }
 
