@@ -147,7 +147,7 @@ development:
     # background_indexing: false
 test:
   clients:
-    default:
+  default:
       database: fargos_unified_wiki_test
       hosts:
         - localhost:27017
@@ -155,3 +155,10 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGODB_DATABASE'] %>
+      options:
+        skip_version_check: true
+        safe: true
