@@ -17,7 +17,7 @@ namespace :create_items_from_jsonl do
 
         item = {
           name: json['name'],
-          types: json['types'],
+          types: types,
           description: json['description'],
           url: json['link'],
           image_url: image_url,
