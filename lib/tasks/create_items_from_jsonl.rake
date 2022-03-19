@@ -13,6 +13,7 @@ namespace :create_items_from_jsonl do
         next if Item.where(name: json['name'], mod: mod).present?
 
         image_url = json['image_link'].match(/(.+(\.png|\.gif))|.+/i)[1] || ''
+        types = json['types'].map { |v| v.delete(" \t\r\n") }
 
         item = {
           name: json['name'],
