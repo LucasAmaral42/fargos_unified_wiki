@@ -13,12 +13,12 @@ scripts/(the_mod_you_want_to_update)/step2_get_info_from_links.rb
 ___
 
 ### Install the dependencies
-`bundle install`
+`bundle install`\
 `yarn install`
 
 ### Before run
-`rake db:setup`
-`rake create_items_from_jsonl:start` if you want to use the jsonl stored in public/jsonl
+`rake db:setup`\
+`rake create_items_from_jsonl:start ` if you want to use the jsonl stored in public/jsonl
 
 ### To run the server
 `rails s`
